@@ -1,0 +1,66 @@
+:root {
+    --game-board-color: #efeeb4;
+    --game-frame-color: #454d66;
+    --snake-color: #309975;
+    --food-color: #dad873;
+    --border: black;
+}
+
+* {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h2,
+div {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#points-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+#score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#game-frame {
+    height: 600px;
+    width: 600px;
+    border: 20px solid var(--game-frame-color);
+    border-radius: 15px;
+}
+
+#game-screen {
+    background-color: var(--game-board-color);
+    display: grid;
+    grid-template-columns: repeat(40, 15px);
+    grid-template-rows: repeat(40, 15px);
+}
+
+.snake {
+    background-color: var(--snake-color);
+    border: 2px solid var(--border);
+    border-radius: 20%;
+}
+
+.food {
+    background-color: var(--food-color);
+    border-radius: 100%;
+    border: 2px solid var(--border);
+    transition: all ease 0.5s;
+}
